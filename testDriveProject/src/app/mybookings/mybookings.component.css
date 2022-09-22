@@ -1,0 +1,39 @@
+.div{
+    background-image: linear-gradient(to bottom, rgb(52 55 68 / 52%), rgb(60 50 58 / 73%)), url(https://c4.wallpaperflare.com/wallpaper/416/674/432/dodge-viper-jaguar-xkr-supercar-night-road-light-2-sports-cars-wallpaper-preview.jpg);
+    
+    height:100vh;
+    width:100vw;
+    background-size: cover;
+}
+.styled-table {
+border-collapse: collapse;
+font-size: 0.9em;
+font-family: sans-serif;
+min-width: 400px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+background-color: #009879;
+/* color: #ffffff; */
+text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+
+.styled-table tbody tr:last-of-type {
+border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+font-weight: bold;
+color: #ffffff;
+}

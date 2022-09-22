@@ -1,0 +1,21 @@
+<div style="background-color: black;">
+
+<h1 align="center" style="color: white;"> Tesla <img src="assets/images/tesla.jfif" style="max-width: 70px;max-height: 70px;">  </h1>
+<div class="container" style="background-color: black; border:0px solid black;">
+    <div class="row md-10"  style="background-color: black; border:0px solid black;">
+        <div class="col-xl-10" *ngFor="let teslaproduct of tesla" style="background-color: black; border:0px solid black;">
+            <div class="card" style="width: 1120px; height:100%; border:0px solid black;">
+                <img class="card-image" [src]=teslaproduct.imagePath alt="Card Image Cap"/>
+                <div class="card-body" style="background-color: black; border:0px solid black;">
+                    <h3 class="card-title" style="text-align: center;color: white;"> {{teslaproduct.productName}} </h3>                    
+                    <p class="card-text" style="color: white;"> {{teslaproduct.description1}} </p>
+                    <p class="card-text" style="color: white;"> {{teslaproduct.description2}} </p>
+                    <p align="right">
+                    <button class="btn btn-black" style="color: white; border:1px solid white;" (click)="book(teslaproduct.productName)"> BOOK A TEST DRIVE </button>
+                </p>
+                </div>
+            </div>            
+        </div>
+        <br/>
+    </div>
+</div>

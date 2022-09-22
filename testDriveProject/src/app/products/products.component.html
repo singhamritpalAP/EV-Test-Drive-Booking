@@ -1,0 +1,20 @@
+<section>
+<br>
+
+<div class="row offset-md-1 carsContainer" style="margin-top: 4px;">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-xs-6" *ngFor="let product of products" style="padding-bottom: 2rem; margin-bottom: 3px; text-align: center;">
+        <div class="card h-100" style="width: 17rem;">
+            <img class="card-img-top" [src]="product.imagePath" >
+            <div class="card-body bgColor">
+                <h5><strong> {{product.productName | uppercase}} </strong></h5>
+                <div style="text-align: left ;">
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text" align="right">
+                        <button class="btn btn-secondary" (click)="book(product.productName)">Check models</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

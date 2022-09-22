@@ -1,0 +1,22 @@
+<div style="background-color: black;">
+
+<h1 align="center" style="color: white ;"> Lamborghini <img src="assets/images/lambo.jpg" style="max-width: 100px;max-height: 100px;"> </h1>
+<div class="container" style="background-color: black; border:0px solid black;">
+    <div class="row md-10" style="background-color: black; border:0px solid black;">
+        <div class="col-xl-10" *ngFor="let lamboproduct of lambo" style="background-color: black; border:0px solid black;">
+            <div class="card" style="width: 1120px; height:100%;background-color: black; border:0px solid black;">
+                <img class="card-image" [src]=lamboproduct.imagePath alt="Card Image Cap"/>
+                <div class="card-body" style="background-color: black; border:0px solid black;">
+                    <h3 class="card-title" style="text-align: center;color: white;;"> {{lamboproduct.productName}} </h3>                    
+                    <p class="card-text" style="color: white;"> {{lamboproduct.description1}} </p>
+                    <p class="card-text" style="color: white;"> {{lamboproduct.description2}} </p>
+                    <p align="right">
+                    <button class="btn btn-black" style="color: white; border:1px solid white;" (click)="book(lamboproduct.productName)"> BOOK A TEST DRIVE </button>
+                </p>
+                </div>
+            </div>            
+        </div>
+        <br/>
+    </div>
+</div>
+</div>

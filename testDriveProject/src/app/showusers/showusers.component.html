@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Modal -->
+<div class="container">
+<div class="modal " id="empModel" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+            <h4 class="modal-title"> Update User </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>          
+        </div>
+
+        <div class="modal-body">
+            <form class="form-group">   <!-- Implementing two way data binding -->
+                Name:  <input type="text"   name="name"  [(ngModel)]="editObject.name" class="form-control"/> <br/>
+                emailId:  <input type="text"     name="emailId"  [(ngModel)]="editObject.emailId"  class="form-control" readonly/> <br/>
+                Address:  <input type="text"   name="address"  [(ngModel)]="editObject.address" class="form-control"/> <br/>
+                Password: <input type="password" name="password" [(ngModel)]="editObject.password" class="form-control"/> <br/>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primar btn-sm" (click)="updateEmployee()" data-dismiss="modal"> Update User </button>
+        </div>
+
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
+
+
+<h2 align="center"> User Data </h2>
+
+<div class="container">
+<table class="table border table-border table-hover table-sm ">
+    <thead>
+        <tr class="bg-info text-white">
+            <th> Name </th>
+            <th> EmailId </th>
+            <th> Address </th>
+            <th> Update </th>
+            <th> Delete </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of employees">
+             <td> {{user.name}} </td>
+             <td align="left"> {{user.emailId | lowercase}} </td> 
+             <td> {{user.address}} </td>
+             <td> <button (click)="editEmp(user)" class="glyphicon glyphicon-pencil"></button> </td>
+             <td> <button (click)="deleteEmployee(user)" class="glyphicon glyphicon-trash"></button> </td>
+        </tr>
+    </tbody>
+</table>
+</div>

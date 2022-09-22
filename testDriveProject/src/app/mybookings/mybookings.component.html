@@ -1,0 +1,31 @@
+<div class="div pt-5">
+    <div  class="container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th> Name </th>
+                    <th> Adress </th>
+                    <th> Phone </th>
+                    <th> Car </th>
+                    <th> Date </th>
+                    <th> Time </th>
+                    <th> Booking Status </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active-row" *ngFor="let book of bookings">
+                    <td> {{book.name}} </td>
+                    <td > {{book.address}} </td>
+                    <td> {{book.phone}} </td>
+                    <td> {{book.car}} </td>
+                    <td > {{book.date}} </td>
+                    <td > {{book.time}} </td>
+                    <td style="color:rgb(7, 255, 28);"> Success </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    
+    </div>
+    
+</div>
